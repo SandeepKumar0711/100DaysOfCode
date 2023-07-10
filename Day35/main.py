@@ -2,7 +2,7 @@ import requests
 from twilio.rest import Client
 
 api_key ="Your_Weather_API_key"     #get free api key on https://www.weatherapi.com/
-account_sid = 'AC90e0b0c8096752815b2d60f89bf298b3'
+account_sid = 'Your Twilio account sid' 
 auth_token = 'Your Twilio authcode'  #get free auth token on https://console.twilio.com/
 
 
@@ -24,9 +24,9 @@ for hour_data in sliced_data:
 if will_rain:
     client = Client(account_sid, auth_token)
     message = client.messages.create(
-        from_='+18148015896',
+        from_='twilio account generated mobile number',
         body='It is going to rain today, Bring your Umbrella☔☔',
-        to='+918077434282'
+        to='your mobile number'
     )
 
     print(message.status)
